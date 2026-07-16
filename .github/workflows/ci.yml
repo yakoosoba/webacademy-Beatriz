@@ -1,8 +1,7 @@
 name: Primeiro Workflow
 on:
-    
     push:
-
+        
 jobs:
 
     primeiro-job:
