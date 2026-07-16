@@ -1,0 +1,24 @@
+name: Primeiro Workflow
+on:
+    
+    push:
+
+env:
+    CURSO: Integração Contínua
+
+jobs:
+
+    terceiro-job:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Terceiro passo"
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: Lista arquivos
+              run: ls ${{ github.workspace }}
+            - name: "Exibe informações"
+              run: |
+                echo "Curso: $CURSO"
+                echo "Usuário: ${{ github.actor }}"
+                echo "Repositório: ${{ github.repository }}"
+                echo "Branch: ${{ github.ref_name }}"
