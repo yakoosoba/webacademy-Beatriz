@@ -1,4 +1,4 @@
-name: Primeiro Workflow
+name: Terceiro Workflow
 on:
     
     push:
@@ -14,8 +14,6 @@ jobs:
             - run: echo "Terceiro passo"
             - name: Checkout
               uses: actions/checkout@v5
-            - name: Lista arquivos
-              run: ls ${{ github.workspace }}
             - name: "Exibe informações"
               run: |
                 echo "Curso: $CURSO"
